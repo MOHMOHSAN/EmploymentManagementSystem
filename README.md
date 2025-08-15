@@ -1,4 +1,4 @@
-### Pre-requiste
+### Prerequisite
 - go to root directory folder
 - npm install
 
@@ -27,11 +27,14 @@ Note: To run one by one,
      -> EmployeeManager
       -> Each Reducer,Saga,Action, constants (CRUD Operation + State Management)
       -> Components 
-      
+
+<img width="1845" height="448" alt="image" src="https://github.com/user-attachments/assets/3c8a54e8-13b8-4135-84ae-630265d113cb" />
+
+
 ### Endpoint Configuration
--> json-server url is now currently specified with port 5000 in package.json file
+- json-server url is now currently specified with port 5000 in package.json file
     http://localhost:5000/employees
--> endpoint base_url (http://localhost:5000) is defined in src\utils\axiosInstance.js
+- endpoint base_url (http://localhost:5000) is defined in src\utils\axiosInstance.js
 
 
 ### Further improvement
