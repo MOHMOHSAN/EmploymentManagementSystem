@@ -1,34 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+
+import { Layout, Typography } from 'antd';
+import { Routes, Route, Link, useLocation } from 'react-router-dom';
+import EmployeeLists from './containers/EmployeeManager/EmployeeLists';
+import EmployeeForm from './containers/EmployeeManager/EmployeeForm';
+const { Header, Content } = Layout;
+const { Title } = Typography;
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const location = useLocation();
+  const isListingPage = location.pathname === '/';
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Layout style={{ minHeight: '100vh' }}>
+        <Header style={{ background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <Title level={3} style={{ margin: 0 }}>Employee Directory</Title>
+          {
+            !isListingPage ? (<Link to="/">Back to list</Link>) : (<Link to="/employee/add">Add Employee</Link>)
+          }
+        </Header>
+        <Content style={{ padding: '24px' }}>
+          <Routes>
+            <Route path="/" element={<EmployeeLists />}></Route>
+            <Route path="/employee/add" element={<EmployeeForm />}></Route>
+          </Routes>
+        </Content>
+    </Layout>
   )
 }
 

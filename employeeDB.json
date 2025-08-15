@@ -1,0 +1,34 @@
+{
+  "employees": [
+    {
+      "id": "1",
+      "first_name": "Alice",
+      "last_name": "Lim",
+      "email": "alice@example.com",
+      "phone": 97244421,
+      "gender": "Female",
+      "dob": "1992-02-23",
+      "joined_date": "2025-02-01"
+    },
+    {
+      "id": "2",
+      "first_name": "Bob",
+      "last_name": "Jin",
+      "email": "bob@example.com",
+      "phone": 97243421,
+      "gender": "Male",
+      "dob": "1992-04-24",
+      "joined_date": "2025-04-21"
+    },
+    {
+      "first_name": "updatev5",
+      "last_name": "Winnagin",
+      "email": "qing@gmail.com",
+      "phone": "97234413",
+      "gender": "Female",
+      "dob": "2025-08-22",
+      "joined_date": "2025-08-30",
+      "id": "1a93"
+    }
+  ]
+}
