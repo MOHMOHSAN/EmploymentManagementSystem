@@ -1,9 +1,9 @@
 /* eslint-disable no-undef */
-const { defineConfig } = require('cypress');
+import { defineConfig } from "cypress";
 
-module.exports = defineConfig({
+export default defineConfig({
   e2e: {
-    baseUrl: 'http://localhost:5173',
-    supportFile: false,
+    baseUrl: "http://localhost:5173", // Vite dev server
+    specPattern: "cypress/e2e/**/*.spec.js",
   },
 });

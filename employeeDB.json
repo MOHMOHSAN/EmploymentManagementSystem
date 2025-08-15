@@ -2,8 +2,8 @@
   "employees": [
     {
       "id": "1",
-      "first_name": "Alice",
-      "last_name": "Lim",
+      "first_name": "AliceLim",
+      "last_name": "Charlotte",
       "email": "alice@example.com",
       "phone": 97244421,
       "gender": "Female",
@@ -12,16 +12,16 @@
     },
     {
       "id": "2",
-      "first_name": "Bob",
-      "last_name": "Jin",
-      "email": "bob@example.com",
+      "first_name": "Daniella",
+      "last_name": "Mackenzie",
+      "email": "Daniella@example.com",
       "phone": 97243421,
       "gender": "Male",
       "dob": "1992-04-24",
       "joined_date": "2025-04-21"
     },
     {
-      "first_name": "updatev5",
+      "first_name": "updatev6",
       "last_name": "Winnagin",
       "email": "qing@gmail.com",
       "phone": "97234413",

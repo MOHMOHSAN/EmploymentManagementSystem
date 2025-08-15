@@ -10,6 +10,7 @@ import { addEmployee, editEmployee ,resetEmployeeFormStatus } from './actions';
 import useCustomBlocker from './components/Blocker';
 
 
+
 const formItemLayout = {
   labelCol: {
     xs: { span: 10 },
@@ -147,36 +148,36 @@ const EmployeeForm = ({ addEmployee, editEmployee, formStatus, resetFormStatus})
                     { required: true, message: 'Please enter first name' },
                     { validator: validateName }
                 ]}>
-                <Input placeholder='Enter your first name'/>
+                <Input placeholder='Enter your first name' data-cy="first_name"/>
             </Form.Item>
 
             <Form.Item label="Last Name" name="last_name" 
                 rules={[
                     { required: true, message: 'Please enter last name' },
                     { validator: validateName }]}>
-                <Input placeholder='Enter your last name'/>
+                <Input placeholder='Enter your last name' data-cy="last_name"/>
             </Form.Item>
 
             <Form.Item label="Email" name="email" 
                 rules={[
                     { required: true, message: 'Please enter email' },
                     { validator: validateEmail }]}>
-                <Input placeholder='Enter your email' />
+                <Input placeholder='Enter your email' data-cy="email" />
             </Form.Item>
 
             <Form.Item label="Phone" name="phone" 
                 rules={[
                     { required: true, message: 'Please enter phone' },
                     { validator: validateSingaporePhone }]}>
-                <Input prefix="+65" placeholder='Enter your phone number' />
+                <Input prefix="+65" placeholder='Enter your phone number'  data-cy="phone"/>
             </Form.Item>
 
             <Form.Item label="Gender" name="gender"
                 rules={[{ required: true, message: 'Please select a gender' }]}
             >
                 <Radio.Group>
-                    <Radio value="Male">Male</Radio>
-                    <Radio value="Female">Female</Radio>
+                    <Radio value="Male" data-cy="gender-Male">Male</Radio>
+                    <Radio value="Female" data-cy="gender-Female">Female</Radio>
                 </Radio.Group>
             </Form.Item>
 
@@ -184,7 +185,7 @@ const EmployeeForm = ({ addEmployee, editEmployee, formStatus, resetFormStatus})
             <Form.Item label="Date of Birth" name="dob"
                 rules={[{ required: true, message: 'Please select birth date' }]}
             >
-                <DatePicker format="YYYY-MM-DD"/>
+                <DatePicker format="YYYY-MM-DD" data-cy="dob"/>
             </Form.Item>
 
             
@@ -194,7 +195,7 @@ const EmployeeForm = ({ addEmployee, editEmployee, formStatus, resetFormStatus})
                     { validator: validateJoinedDate(form) }
                 ]}
             >
-                <DatePicker />
+                <DatePicker format="YYYY-MM-DD" data-cy="joined_date"/>
             </Form.Item>
 
 
